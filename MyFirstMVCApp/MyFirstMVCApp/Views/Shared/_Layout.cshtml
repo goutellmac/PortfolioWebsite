@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <title>@ViewBag.Title - MGoutell Portfolio</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-header navbar-left">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+  
+        </div>
+        <div class="navbar-inverse navbar-fixed-top navbar-collapse navbar-static-top">
+            
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="navlist"><a href="@Url.Action("Index", "Home")"><i class='fa fa-home'></i> Home</a></li>
+                        <li class="navlist"><a href="@Url.Action("Index", "Resume")"><i class='fa fa-file-text'></i> Resume</a></li>
+                        <li class="navlist"><a href="@Url.Action("About", "Home")"><i class='fa fa-info-circle'></i> About</a></li>
+                        <li class="navlist"><a href="@Url.Action("Contact", "Home")"><i class='fa fa-mobile-phone'></i> Contact</a></li>
+                        <li class="navlist"><a href="@Url.Action("Index", "Work")"><i class='fa fa-folder-open'></i> Work</a></li>
+                    </ul>
+
+            </div>
+        </div>
+ 
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+        @*<footer>
+            <p>&copy; @DateTime.Now.Year - MGDesign</p>
+             <audio controls class="musiccontrols">
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+        </footer>*@
+    <div class="navbar-inverse navbar-fixed-bottom navbar-collapse navbar-static-bottom">
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="navlist"><a href="https://github.com/goutellmac"><i class='fa fa-github-alt'></i> GitHub</a></li>
+                <li class="navlist"><a href="https://www.linkedin.com/pub/mac-goutell/b9/518/96b"><i class='fa fa-linkedin-square'></i> LinkedIn</a></li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>
